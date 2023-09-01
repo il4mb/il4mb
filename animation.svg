@@ -27,7 +27,7 @@
                     box-shadow: 0 0 0 0px #55a4ffa8;
                     width: 100px;
                     height: 100px;
-                    animation: person 30s forwards;
+                    animation: person 30s infinite;
                     position: absolute;
                     top: 75px;
                     left: 250px;
@@ -45,7 +45,9 @@
                     6%   { top: 25px; }
                     7%   {transform: scale(0.8); top: 25px; left: 250px; }
                     10%  {transform: scale(0.4); top: 0px;  left: 0px; }
-                    100% {transform: scale(0.4); top: 0px;  left: 0px;   border-radius: 100rem; opacity: 1; box-shadow: 0 0 0 4px #55a4ffa8; }
+                    95%  {transform: scale(0.4); top: 0px;  left: 0px;   border-radius: 100rem; opacity: 1; box-shadow: 0 0 0 4px #55a4ffa8; }
+                    99% { top: 75px; left: 250px; transform: scale(0.4); }
+                    100% {transform: scale(1); }
                 }
                 
                 .floating {
