@@ -30,14 +30,9 @@
                 }
 
                 .braces {
-                    position: relative;
-                    font-size: 5rem;
-                    color: #555cff96;
-                    padding: 0 50px;
-                    padding-bottom: 1rem;
-                    height: 150px;
-                    display: inline-flex;
-                    align-items: end;
+                   position: relative;
+                    font-size: 4.5rem;
+      
                 }
 
                 .braces::before,
@@ -49,11 +44,11 @@
                     background-size: 1000% 1000%;
                     background-repeat: no-repeat;
                     background-position: center;
-                    display: inline-block;
+                    display: block;
                     width: 50px;
                     height: 150px;
                     animation: bg 5s infinite alternate ease-in-out;
-                    filter: blur(50px);
+                    filter: blur(2px);
                     position: absolute;
                 }
 
@@ -74,13 +69,22 @@
 
                 .typwrite {
                     display: inline-block;
-                    font-size: 5rem;
-                    height: 80px;
-                    width: 0;
+                    width: fit-content;
+                    max-width: 0;
                     overflow: hidden;
                     white-space: nowrap;
                     animation: typewriter 2s steps(40) 1s 1 normal both, blinkTextCursor 500ms steps(40) infinite normal;
                     border-right: 5px solid transparent;
+                    margin: 0 55px;
+                }
+
+                .braces.typwrite {
+                    display: inline-flex;
+                    min-height: 150px;
+                }
+                .braces.typwrite * {
+                    padding-left: 50px;
+                    padding-right: 50px;
                 }
 
                 .container {
@@ -90,11 +94,11 @@
 
                 @keyframes typewriter {
                     from {
-                        width: 0;
+                        max-width: 0;
                     }
 
                     to {
-                        width: 100%;
+                        max-width: 500px;
                     }
                 }
 
@@ -114,9 +118,6 @@
                     }
                     50% {
                         background-position: 100% 50%;
-                    }
-                    100% {
-                        background-position: 0% 50%;
                     }
                 }
 
