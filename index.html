@@ -7,7 +7,214 @@
 </head>
 <body>
 
-    <img src="./animation.svg" alt="Animation">
+    <div style="width: 100vw; height: 100vh">
+        <svg fill="none" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <foreignObject x="0" y="0" width="100%" height="100%">
+
+        <body xmlns="http://www.w3.org/1999/xhtml">
+            <style>
+                :root {
+
+                    --object-open-bracket: url("data:image/svg+xml,%3Csvg viewBox='0 0 4.238 11.963' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m1.114 6.063v-0.163c1.005-0.102 1.497-0.615 1.497-1.6v-1.797c0-1.094 0.39-1.538 1.354-1.538h0.273v-0.965h-0.376c-1.612 0-2.372 0.759-2.372 2.352v1.524c0 1.094-0.376 1.456-1.49 1.456v1.299c1.114 0 1.49 0.362 1.49 1.456v1.524c0 1.593 0.759 2.352 2.372 2.352h0.376v-0.964h-0.273c-0.964 0-1.354-0.444-1.354-1.538v-1.798c0-0.984-0.492-1.497-1.497-1.6z'/%3E%3C/svg%3E%0A");
+                    --object-close-bracket: url("data:image/svg+xml,%3Csvg viewBox='0 0 4.238 11.963' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m3.124 5.9v0.163c-1.005 0.103-1.497 0.616-1.497 1.6v1.798c0 1.094-0.39 1.538-1.354 1.538h-0.273v0.964h0.376c1.613 0 2.372-0.759 2.372-2.352v-1.524c0-1.094 0.376-1.456 1.49-1.456v-1.299c-1.114 0-1.49-0.362-1.49-1.456v-1.524c0-1.593-0.76-2.352-2.372-2.352h-0.376v0.964h0.273c0.964 0 1.354 0.444 1.354 1.538v1.798c0 0.984 0.492 1.497 1.497 1.6z'/%3E%3C/svg%3E%0A");
+                    --font-size: 2.5rem;
+                }
+
+                body {
+                    margin: 0;
+                    padding: 0;
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                * {
+                    font-family: monospace, sans-serif;
+                }
+
+                .braces {
+                    position: relative;
+                    font-size: var(--font-size);
+                    min-width: 150px;
+                    height: 150px;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+
+                }
+
+                .braces::before,
+                .braces::after {
+                    content: "";
+                    mask-repeat: no-repeat;
+                    -webkit-mask-repeat: no-repeat;
+                    background: linear-gradient(45deg, #7455ff8a, #555cff96, #55ff5ba3, #993499a3, #ff5555a3, #7455ffa8);
+                    background-size: 1000% 1000%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    display: block;
+                    width: 50px;
+                    height: 150px;
+                    animation: bg 5s infinite alternate ease-in-out;
+                    filter: blur(2px);
+                    position: absolute;
+                }
+
+                .braces::before {
+                    mask-image: var(--object-open-bracket);
+                    -webkit-mask-image: var(--object-open-bracket);
+                    bottom: 0;
+                    left: 0;
+                }
+
+                .braces::after {
+                    mask-image: var(--object-close-bracket);
+                    -webkit-mask-image: var(--object-close-bracket);
+                    bottom: 0;
+                    right: 0;
+                }
+
+
+                .typwrite {
+                    position: absolute;
+                    top: 600px;
+                    display: inline-flex;
+                    font-size: var(--font-size);
+                    width: fit-content;
+                    max-width: 0;
+                    overflow: unset;
+                    white-space: nowrap;
+                    border-right: 5px solid transparent;
+                    margin: 0 55px;
+                    background: linear-gradient(45deg, #7455ff8a, #555cff96, #55ff5ba3, #993499a3, #ff5555a3, #7455ffa8);
+                    background-size: 2500px;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+
+                    animation: typewriter 5s steps(40) 1s 1 normal both, blinkTextCursor 500ms steps(40) infinite normal, bg 5s infinite alternate ease-in-out;
+
+                }
+
+                .container {
+                    display: inline-block;
+                    text-align: center;
+                }
+
+                @keyframes typewriter {
+                    1% {
+                        position: unset;
+                        max-width: 0;
+                    }
+
+                    25% {
+                        position: unset;
+                        max-width: 600px;
+                    }
+
+                    75% {
+                        position: unset;
+                        max-width: 600px;
+                    }
+                    99% {
+                        position: unset;
+                    }
+                    100% {
+                        position: absolute;
+                        max-width: 0;
+                    }
+
+                }
+
+                @keyframes blinkTextCursor {
+                    from {
+                        border-right-color: rgba(43, 28, 28, 0.862);
+                    }
+
+                    to {
+                        border-right-color: transparent;
+                    }
+                }
+
+                @keyframes bg {
+                    0% {
+                        background-position: 0% 50%;
+                    }
+
+                    50% {
+                        background-position: 100% 50%;
+                    }
+                }
+
+
+                .typwrite.s1 {
+                    animation-delay: 0s;
+                }
+                .typwrite.s2 {
+                    animation-delay: 5s;
+                }
+                .typwrite.s3 {
+                    animation-delay: 10s;
+                    animation: typewriter 5s steps(40) 1s 1 normal both forwards, blinkTextCursor 500ms steps(40) infinite normal, bg 5s infinite alternate ease-in-out;
+                }
+                .typwrite.s4 {
+                    animation-delay: 15s;
+                }
+                .typwrite.s5 {
+                    animation-delay: 20s;
+                }
+                .typwrite.s6 {
+                    animation-delay: 25s;
+                }
+                .typwrite.s7 {
+                    animation-delay: 30s;
+                }
+                .typwrite.s8 {
+                    animation-delay: 35s;
+                }
+                .typwrite.s9 {
+                    animation-delay: 40s;
+                }
+                .typwrite.s10 {
+                    animation-delay: 45s;
+                }
+                .typwrite.s11 {
+                    animation-delay: 50s;
+                }
+                .typwrite.s12 {
+                    animation-delay: 55s;
+                }
+
+
+                .typwrite_ {
+                    display: none;
+                }
+            </style>
+
+            <div class="container">
+                <div class="braces">
+                    <div class="typwrite s1">Hi three 👋</div> <!-- Hi three 👋 -->
+                    <div class="typwrite s2">im Il4mb</div>
+                    <div class="typwrite s3">full-stack developer</div>
+                    <div class="typwrite s4">programming is not</div>
+                    <div class="typwrite s5">about</div>
+                    <div class="typwrite s6">memorizing syntax</div>
+                    <div class="typwrite s7">but mastering a</div>
+                    <div class="typwrite s8">story line,</div>
+                    <div class="typwrite s9">having logical thinking,</div>
+                    <div class="typwrite s10">and</div>
+                    <div class="typwrite s11">understanding computer logic</div>
+
+                </div>
+            </div>
+        </body>
+    </foreignObject>
+</svg>
+    </div>
     
 </body>
 </html>
