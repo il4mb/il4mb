@@ -30,9 +30,9 @@
                 }
 
                 .braces {
-                   position: relative;
+                    position: relative;
                     font-size: 4.5rem;
-      
+
                 }
 
                 .braces::before,
@@ -73,15 +73,24 @@
                     max-width: 0;
                     overflow: hidden;
                     white-space: nowrap;
-                    animation: typewriter 2s steps(40) 1s 1 normal both, blinkTextCursor 500ms steps(40) infinite normal;
+                    animation: typewriter 2s steps(40) 1s 1 normal both, blinkTextCursor 500ms steps(40) infinite normal, bg 5s infinite alternate ease-in-out;
                     border-right: 5px solid transparent;
                     margin: 0 55px;
+
+                    background: linear-gradient(45deg, #7455ff8a, #555cff96, #55ff5ba3, #993499a3, #ff5555a3, #7455ffa8);
+
+                    background-size: 2500px;
+                    background-attachment: fixed;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+
                 }
 
                 .braces.typwrite {
                     display: inline-flex;
                     min-height: 150px;
                 }
+
                 .braces.typwrite * {
                     padding-left: 50px;
                     padding-right: 50px;
@@ -116,12 +125,11 @@
                     0% {
                         background-position: 0% 50%;
                     }
+
                     50% {
                         background-position: 100% 50%;
                     }
                 }
-
-               
             </style>
 
             <div class="container">
