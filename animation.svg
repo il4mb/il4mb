@@ -3,7 +3,7 @@
 
     <foreignObject width="600px" height="300px">
 
-        <body xmlns="http://www.w3.org/1999/xhtml">
+        <div class='body' xmlns="http://www.w3.org/1999/xhtml">
             <style>
                 :root {
 
@@ -12,7 +12,7 @@
                     --font-size: 2.5rem;
                 }
 
-                body {
+                .body {
                     margin: 0;
                     padding: 0;
                     height: 100%;
@@ -83,7 +83,6 @@
                     margin: 0 55px;
                     background: linear-gradient(45deg, #7455ff8a, #555cff96, #55ff5ba3, #993499a3, #ff5555a3, #7455ffa8);
                     background-size: 2500px;
-                    background-attachment: fixed;
                     -webkit-text-fill-color: transparent;
                     -webkit-background-clip: text;
 
@@ -198,6 +197,6 @@
 
                 </div>
             </div>
-        </body>
+        </div>
     </foreignObject>
 </svg>
