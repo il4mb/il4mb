@@ -75,7 +75,7 @@
                     top: 600px;
                     display: inline-block;
                     font-size: var(--font-size);
-                    width: fit-content;
+                    width: max-content;
                     max-width: 0;
                     overflow: hidden;
                     white-space: nowrap;
@@ -104,12 +104,12 @@
 
                     25% {
                         position: unset;
-                        max-width: 100vw;
+                        max-width: 600px;
                     }
 
                     75% {
                         position: unset;
-                        max-width: 100vw;
+                        max-width: 600px;
                     }
                     99% {
                         position: unset;
