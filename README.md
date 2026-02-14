@@ -1,4 +1,4 @@
-https://komarev.com/ghpvc/?username=il4mb&style=flat-square
+![](https://komarev.com/ghpvc/?username=il4mb&style=flat-square)
 ![Animation](./animation.svg)
 <!--
 **il4mb/il4mb** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
